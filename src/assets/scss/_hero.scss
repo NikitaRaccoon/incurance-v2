@@ -1,0 +1,648 @@
+.hero {
+    padding: 75px 0px 63px 0px;
+    background-color: $heroBackground;
+
+    .container {
+        position: relative;
+    }
+
+    &.error {
+        padding: 0;
+
+        .container {
+
+            padding: 70px 40px 125px 40px;
+        }
+
+        .hero__title {
+            margin-bottom: 30px;
+        }
+
+        .hero__subtitle {
+            color: #66747A;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 30px;
+            max-width: 575px;
+            margin-bottom: 57px;
+
+            a {
+                color: $blue1;
+            }
+        }
+
+        .hero__background {
+            top: auto;
+            bottom: 0;
+            right: auto;
+            width: 1006px;
+            left: 535px;
+        }
+
+        .btn {
+            color: $white;
+        }
+    }
+
+    &.dev {
+        padding: 0;
+
+        .container {
+
+            padding: 70px 40px 125px 40px;
+        }
+
+        .hero__title {
+            margin-bottom: 30px;
+        }
+
+        .hero__subtitle {
+            color: #66747A;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 30px;
+            max-width: 575px;
+            margin-bottom: 57px;
+        }
+
+        .btn {
+            color: $white;
+        }
+
+        .hero__background {
+            top: auto;
+            bottom: 0;
+            right: auto;
+            width: 605px;
+            left: 748px
+        }
+    }
+
+    &__title {
+        color: $font1;
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 110%;
+        max-width: 600px;
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__background {
+        position: absolute;
+        width: 1900px;
+        right: -726px;
+        top: -266px;
+        z-index: 0;
+    }
+
+    &__subtitle {
+        color: $font2;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 120%;
+        letter-spacing: -1.25px;
+        margin-bottom: 50px;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 30px;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__btn {
+
+        font-size: 16px;
+        line-height: 20px;
+        padding: 20px 35px;
+        border-radius: 10px;
+
+        &:last-child {
+            background-color: $white;
+            color: $blue1;
+        }
+    }
+
+    &__text {
+
+        margin-bottom: 70px;
+        max-width: 450px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 26px;
+        color: $font2;
+        position: relative;
+        z-index: 1;
+
+        img {
+            display: inline-block;
+            margin: 0 5px;
+            position: relative;
+            top: 3px;
+        }
+    }
+
+    &__advantages {
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        border-radius: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        padding: 34px 50px;
+        margin-bottom: 50px;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__advantages-item {
+
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+
+        div {
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            p {
+
+                font-size: 16px;
+
+                line-height: 1;
+
+                &:first-child {
+                    font-weight: 600;
+                    color: $font1;
+                }
+
+                &:last-child {
+                    color: $font2;
+                }
+            }
+        }
+    }
+
+    &__steps {
+        position: relative;
+        z-index: 1;
+
+        max-width: 1170px;
+        padding: 0 15px;
+        margin: 0 auto;
+
+        .swiper-wrapper {
+            display: flex;
+            gap: 10px;
+        }
+
+    }
+
+    &__steps-item {
+        background-color: $white;
+        padding: 36px 50px 52px 50px;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 420px;
+        flex-shrink: 1;
+
+        span {
+            display: inline-block;
+            color: rgba(156, 165, 169, 0.35);
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 110%;
+            margin-bottom: 30px;
+            flex: 1 0 auto;
+        }
+
+        div {
+            color: $font1;
+            font-size: 26px;
+            font-weight: 700;
+            line-height: 110%;
+            margin-bottom: 25px;
+            min-height: 100px;
+            display: flex;
+            align-items: flex-end;
+
+            max-width: 308px;
+        }
+
+        p {
+            color: $font2;
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 145%;
+            max-width: 300px;
+            flex: 1 0 auto;
+            min-height: 88px;
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .hero {
+
+        &.error {
+
+            .hero__background {
+                top: auto;
+                bottom: 0;
+                right: auto;
+                left: 430px;
+                width: 980px;
+            }
+        }
+
+        &.dev {
+
+            .hero__background {
+                top: auto;
+                bottom: 0;
+                right: auto;
+                width: 571px;
+                left: 647px;
+            }
+
+        }
+
+        padding: 60px 0;
+
+        &__title {
+            font-size: 50px;
+            max-width: 600px;
+        }
+
+        &__subtitle {
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+
+        &__btn {
+            font-size: 18px;
+        }
+
+        &__text {
+            font-size: 18px;
+        }
+
+        &__advantages-item {
+            font-size: 15px;
+        }
+
+        &__steps-item {
+            padding: 40px 40px 62px 40px;
+        }
+
+        &__background {
+            width: 1842px;
+            right: auto;
+            left: 50px;
+            top: -238px;
+        }
+
+    }
+}
+
+@media (max-width: 991px) {
+    .hero {
+        padding: 40px 0 20px 0;
+
+        &.error {
+
+            .hero__title {
+                max-width: none;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .hero__subtitle {
+                max-width: none;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .hero__buttons {
+                align-items: center;
+                margin-bottom: 0;
+            }
+
+            .container {
+                padding-bottom: 0;
+            }
+
+            .hero__background {
+                position: static;
+                width: 100%;
+            }
+        }
+
+        &.dev {
+
+            .hero__title {
+                max-width: none;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .hero__subtitle {
+                max-width: none;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .hero__buttons {
+                align-items: center;
+                margin-bottom: 0;
+            }
+
+            .container {
+                padding-bottom: 200px;
+            }
+
+            .hero__background {
+                position: absolute;
+                width: 100%;
+                left: 0;
+                bottom: 0;
+            }
+
+        }
+
+        &__title {
+            font-size: 35px;
+            max-width: 380px;
+            margin-bottom: 5px;
+        }
+
+        &__subtitle {
+            margin-bottom: 35px;
+        }
+
+        &__buttons {
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        &__btn {
+            width: 100%;
+            max-width: 250px;
+            font-size: 13px;
+            text-align: center;
+            padding: 15px 40px;
+        }
+
+        &__text {
+            font-size: 14px;
+            max-width: 330px;
+            margin-bottom: 25px;
+            line-height: 20px;
+
+            img {
+                top: 0;
+            }
+        }
+
+        &__advantages {
+            border-width: 1px 0px 0px 0px;
+            border-radius: 0;
+            padding: 20px 40px 20px 0px;
+            margin-bottom: 10px;
+        }
+
+        &__advantages-item {
+            font-size: 11px;
+            gap: 15px;
+
+            img {
+                width: 12px;
+            }
+        }
+
+        &__steps {
+
+            max-width: none;
+            margin: 0;
+
+            .swiper-wrapper {
+                gap: 0;
+            }
+        }
+
+        &__steps-item {
+            padding: 25px;
+            flex-shrink: 0;
+            max-width: 300px;
+
+            span {
+                font-size: 13px;
+            }
+
+            div {
+                font-size: 20px;
+                min-height: 66px;
+            }
+
+            p {
+                font-size: 14px;
+                min-height: 80px;
+            }
+        }
+
+        &__background {
+            width: 1399px;
+            right: auto;
+            left: -50px;
+            top: -161px;
+        }
+
+    }
+}
+
+@media (max-width: 620px) {
+    .hero {
+
+        padding: 10px 0 62px 0;
+
+        &.error {
+
+            .container {
+                padding-bottom: 350px;
+            }
+
+            .hero__title {
+                max-width: none;
+                text-align: left;
+                margin-bottom: 20px;
+            }
+
+            .hero__subtitle {
+                max-width: none;
+                text-align: left;
+                margin-bottom: 20px;
+            }
+
+            .hero__buttons {
+                align-items: flex-start;
+            }
+
+            .hero__background {
+                position: absolute;
+                bottom: 0;
+                // width: 620px;
+                // left: calc(50% - 300px);
+                width: 100%;
+                left: 0;
+            }
+        }
+
+        &.dev.error {
+
+            .hero__background {
+                position: static;
+                width: 100%;
+            }
+
+            .container {
+                padding-bottom: 0;
+            }
+        }
+
+        &__title {
+            font-size: 33px;
+            max-width: 100%;
+            margin-bottom: 5px;
+        }
+
+        &__subtitle {
+            font-size: 16px;
+        }
+
+        &__buttons {
+            margin-bottom: 35px;
+        }
+
+        &__btn {
+            max-width: 100%;
+            font-size: 13px;
+            padding: 25px 40px;
+            font-size: 16px;
+        }
+
+        &__text {
+            font-size: 15px;
+            max-width: 100%;
+            margin-bottom: 335px;
+            line-height: 145%;
+        }
+
+        &__advantages {
+            border: none;
+            padding: 0;
+            margin-bottom: 20px;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        &__advantages-item {
+            font-size: 11px;
+            gap: 10px;
+
+            div {
+                display: block;
+            }
+
+            p {
+                display: inline;
+                line-height: 145%;
+            }
+        }
+
+        &__steps {
+            padding-right: 40px;
+        }
+
+        &__steps-item {
+            padding: 30px;
+            max-width: 350px;
+
+            span {
+                font-size: 14px;
+            }
+
+            div {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+        }
+
+        &__background {
+            width: 1000px;
+            left: calc(50% - 500px);
+            top: 320px;
+        }
+
+    }
+}
+
+@media (max-width: 375px) {
+
+    .hero {
+
+        &__text {
+
+            img {
+
+                display: none;
+            }
+        }
+
+        &__steps {
+
+            padding: 0 15px;
+
+        }
+
+        &__background {
+            width: 900px;
+            left: -280px;
+            top: 400px;
+        }
+
+    }
+
+}
+
+body.dark-theme {
+
+    .hero {
+        background-color: #33393b;
+
+        &__btn:last-child {
+            background-color: #292e2f;
+        }
+
+        &__advantages {
+            border-color: rgba(255, 255, 255, 0.05);
+
+        }
+
+        &__steps-item {
+            background-color: #292e2f;
+        }
+    }
+}

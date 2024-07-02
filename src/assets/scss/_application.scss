@@ -1,0 +1,301 @@
+.application {
+
+    background: url(../images/application-background.png) center / cover no-repeat;
+
+    * {
+        color: $white;
+    }
+
+    padding: 75px 0 87px 0;
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+
+        &:first-child {
+            max-width: 550px;
+        }
+
+        &:last-child {
+            max-width: 440px;
+        }
+    }
+
+    &__title {
+        font-size: 46px;
+        line-height: 110%;
+        font-weight: 700;
+        margin-bottom: 35px;
+    }
+
+    &__subtitle {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 145%;
+    }
+
+    &__form {
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .form__item-container {
+
+                label {
+                    font-size: 18px;
+                    text-align: center;
+                }
+            }
+
+            .form__item {
+
+                width: 100%;
+                max-width: 100%;
+                margin-bottom: 0;
+
+                input[type="tel"] {
+                    width: 100%;
+                    padding: 35px 30px 15px;
+                    text-align: center;
+                    background-color: $white;
+                    border-radius: 7px;
+
+                    color: $font1;
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 1;
+                }
+
+                input[type="submit"] {
+                    cursor: pointer;
+                    padding: 25px 30px;
+                    font-size: 20px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &__policy {
+        margin-top: 10px;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 145%;
+        margin-top: 15px;
+
+        a {
+            font-weight: 700;
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .application {
+
+        padding: 70px 0;
+
+        &__col {
+
+            &:last-child {
+                max-width: 400px;
+            }
+        }
+
+        &__title {
+            font-size: 45px;
+            line-height: 110%;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        &__subtitle {
+            font-size: 18px;
+        }
+
+        &__form {
+
+            margin-bottom: 5px;
+
+            form {
+
+                .form__item {
+
+                    input[type="tel"] {
+                        padding: 25px 35px;
+                        text-align: center;
+
+                        color: $font1;
+                        font-size: 15px;
+                    }
+
+                    input[type="submit"] {
+                        padding: 25px 35px;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+
+        &__policy {
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+
+    .application {
+
+        background: url(../images/application-background.png);
+
+        * {
+            color: $white;
+        }
+
+        padding: 50px 0;
+
+        &__row {
+            display: flex;
+            justify-content: normal;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        &__col {
+
+            &:first-child {
+                max-width: 380px;
+            }
+
+            &:last-child {
+                max-width: 100%;
+            }
+        }
+
+        &__title {
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        &__subtitle {
+            font-size: 15px;
+        }
+
+        &__form {
+
+            form {
+                flex-direction: row;
+                gap: 20px;
+                width: 100%;
+
+                .form__item {
+
+                    width: 100%;
+
+                    input[type="tel"] {
+                        width: 100%;
+                        padding: 20px 35px;
+                        font-size: 13px;
+                        font-weight: 600;
+                        line-height: 145%;
+                    }
+
+                    input[type="submit"] {
+                        padding: 20px 35px;
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+
+        &__policy {
+            font-size: 12px;
+        }
+    }
+
+}
+
+@media (max-width: 620px) {
+
+    .application {
+
+        padding: 40px 0;
+
+        &__row {
+            gap: 38px;
+        }
+
+        &__title {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        &__form {
+
+            form {
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+
+                .form__item {
+
+                    width: 100%;
+
+                    input[type="tel"] {
+                        padding: 20px 35px;
+                        font-size: 15px;
+                    }
+
+                    input[type="submit"] {
+                        padding: 25px 35px;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+
+        &__policy {
+            color: rgba(255, 255, 255, 0.65);
+            font-size: 12px;
+
+            a {
+                color: rgba(255, 255, 255, 0.65);
+            }
+        }
+    }
+
+}
+
+body.dark-theme {
+
+    .application {
+
+        background: url(../images/application-background-dark.png);
+
+        &__form {
+
+            form {
+
+                .form__item input[type=tel] {
+                    background-color: #292E2F;
+
+                    &::placeholder {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+    }
+
+}

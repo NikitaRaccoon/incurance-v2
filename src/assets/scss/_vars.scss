@@ -1,0 +1,102 @@
+$font1: #33393B;
+$font2: #66747A;
+$heroBackground: #F5F6F8;
+
+$white: #fff;
+$grey1: #525D62;
+$blue1: #2DB4C9;
+
+main {
+    overflow: hidden;
+}
+
+body {
+    background-color: #fff;
+    font-size: 18px;
+
+    * {
+        font-family: 'Mont';
+    }
+
+    a {
+        transition: .3s;
+    }
+
+    &.dark-theme {
+        background-color: #292E2F;
+
+        main,
+        header,
+        .mobile-menu {
+            * {
+                color: #fff !important;
+
+            }
+        }
+    }
+}
+
+h2 {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 110%;
+    color: $font1;
+
+    &.bg {
+
+        font-size: 46px;
+
+    }
+}
+
+.container {
+    max-width: 1170px;
+    padding: 0px 15px;
+    margin: 0 auto;
+
+    @media (max-width: 500px) {
+        padding: 0px 15px;
+    }
+}
+
+.btn {
+    // background-color: $blue1;
+
+    background: linear-gradient(270deg, rgba(120, 204, 217, 1) 0%, rgba(45, 180, 201, 1) 55%, rgba(45, 180, 201, 1) 100%);
+    background-position: 0px 0px;
+    background-color: #2DB4C9;
+    background-size: 150%;
+
+    display: inline-block;
+    border-radius: 6px;
+    padding: 20px 35px;
+    font-size: 17px;
+    font-weight: 700;
+    color: $white;
+    transition: .5s;
+
+    &:hover {
+        background-position: 100% 0px;
+    }
+
+    &:not(.empty):focus {
+        background: #2DB4C9;
+        background-color: #2DB4C9;
+    }
+
+    &.empty {
+        background: #fff;
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

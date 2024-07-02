@@ -1,0 +1,319 @@
+body {
+    &.mobile-menu-opened {
+        overflow: hidden;
+
+        .mobile-menu {
+            left: 0;
+        }
+
+        .overlay {
+            display: block;
+        }
+    }
+
+    &.fixed {
+        .mobile-menu {
+            top: 70px;
+        }
+    }
+}
+
+.overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9;
+    background-color: #ffffff78;
+    display: none;
+}
+
+.mobile-menu {
+    position: fixed;
+    transition: .3s ease-out;
+    width: 100%;
+    top: 89px;
+    left: -100%;
+    z-index: 10;
+    background-color: $white;
+    max-height: calc(100vh - 90px);
+    overflow-y: auto;
+    display: none;
+
+    &__buttons {
+        display: flex;
+        gap: 7px;
+        padding: 0 40px;
+        display: none;
+        align-items: center;
+        margin-top: 35px;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        p {
+            color: $blue1;
+        }
+    }
+
+    &__btn {
+        display: block;
+        font-size: 15px;
+        flex: 1 1 auto;
+        text-align: center;
+        padding: 15px 30px;
+
+        &:first-child {
+            background: #F8F9FA;
+            color: #66747A;
+        }
+    }
+
+    &__list {
+
+        .first-level {
+            display: flex;
+            flex-direction: column;
+
+            &>li {
+
+                border-bottom: 1px solid #F4F4F4;
+                position: relative;
+
+                &>a {
+                    padding: 30px 74px;
+                    position: relative;
+
+                    color: $font1;
+                    font-size: 17px;
+                    font-weight: 700;
+                    line-height: 110%;
+                }
+
+                &.more.opened {
+                    &>a {
+                        padding-bottom: 20px;
+                    }
+                }
+
+                &.opened {
+                    &::after {
+                        transform: rotate(180deg);
+                    }
+                }
+
+                display: flex;
+                flex-direction: column;
+
+                &::after {
+                    content: "";
+                    display: inline-block;
+                    position: absolute;
+                    transition: .3s;
+                    background: url(../images/icons/select-arrow-grey.svg) center / cover no-repeat;
+                    height: 6px;
+                    width: 9px;
+                    top: 37px;
+                    right: 74px;
+                }
+            }
+        }
+
+        .second-level {
+
+            & li:last-child {
+                border: none;
+            }
+
+            &>li:not(:first-child) {
+                padding-top: 20px;
+            }
+
+            display: none;
+
+            &>li {
+                margin: 0px 74px 30px 74px;
+                display: flex;
+                gap: 20px;
+
+                span {
+                    flex: 0 0 35px;
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 5px;
+                    background-color: #EAF7FA;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+        }
+
+        .list-wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                a {
+                    color: #9CA5A9;
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: 120%;
+
+                }
+            }
+        }
+
+        .list-title {
+            color: $font1;
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 120%;
+        }
+    }
+
+    &__contacts {
+        background-color: $blue1;
+        padding: 40px 74px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        * {
+            color: $white;
+        }
+    }
+
+    &__contacts-phone {
+        font-size: 35px;
+        font-weight: 600;
+        line-height: 14px;
+    }
+
+    &__contacts-email {
+        p {
+            font-size: 15px;
+            line-height: 14px;
+        }
+    }
+
+    &__verison {
+        padding: 30px 74px;
+
+        a {
+            color: $blue1;
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 14px;
+            text-decoration-line: underline;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .mobile-menu {
+        display: block;
+    }
+}
+
+@media (max-width: 620px) {
+
+    .mobile-menu {
+
+        &__buttons {
+            display: flex;
+        }
+
+        &__list {
+
+            .first-level {
+
+                &>li {
+
+
+                    &>a {
+                        padding: 30px 40px;
+                        position: relative;
+                    }
+
+                    &::after {
+                        right: 48px;
+                    }
+                }
+            }
+
+            .second-level {
+
+                display: none;
+
+                &>li {
+                    padding: 0px 0px 20px 0px;
+                    margin: 0 40px;
+                    border-bottom: 1px solid #F4F4F4;
+                }
+
+            }
+        }
+
+        &__contacts {
+            padding: 40px;
+        }
+
+        &__verison {
+            padding: 40px;
+        }
+    }
+}
+
+body.dark-theme {
+
+    .dark-theme-button.active,
+    .light-theme-button.active {
+        background-color: #33393b;
+    }
+
+    .overlay {
+        background-color: #000000be;
+    }
+
+    .mobile-menu {
+        background-color: #292E2F;
+
+        &__verison a {
+            color: $blue1 !important;
+        }
+
+        * {
+            border-color: rgba(244, 244, 244, 0.10);
+        }
+
+        &__list .second-level>li span {
+            background-color: #293b3e;
+        }
+
+        &__list .first-level>li:after {
+            background: url(../images/icons/select-arrow-white.svg) 50%/cover no-repeat;
+        }
+
+        &__buttons {
+            p {
+                color: $blue1 !important;
+            }
+        }
+
+        &__btn {
+
+            &:first-child {
+                background: #33393b;
+                color: #fff;
+            }
+        }
+
+    }
+
+}

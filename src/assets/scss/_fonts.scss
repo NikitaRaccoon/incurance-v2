@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'Mont';
+    src: local('Mont Semi Bold'), local('Mont-Semi-Bold'),
+        url('../fonts/Mont-SemiBold.woff2') format('woff2'),
+        url('../fonts/Mont-SemiBold.woff') format('woff'),
+        url('../fonts/Mont-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mont';
+    src: local('Mont Black'), local('Mont-Black'),
+        url('../fonts/Mont-Black.woff2') format('woff2'),
+        url('../fonts/Mont-Black.woff') format('woff'),
+        url('../fonts/Mont-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mont';
+    src: local('Mont Bold'), local('Mont-Bold'),
+        url('../fonts/Mont-Bold.woff2') format('woff2'),
+        url('../fonts/Mont-Bold.woff') format('woff'),
+        url('../fonts/Mont-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mont';
+    src: local('Mont Heavy'), local('Mont-Heavy'),
+        url('../fonts/Mont-Heavy.woff2') format('woff2'),
+        url('../fonts/Mont-Heavy.woff') format('woff'),
+        url('../fonts/Mont-Heavy.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mont';
+    src: local('Mont Light'), local('Mont-Light'),
+        url('../fonts/Mont-Light.woff2') format('woff2'),
+        url('../fonts/Mont-Light.woff') format('woff'),
+        url('../fonts/Mont-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mont';
+    src: local('Mont Regular'), local('Mont-Regular'),
+        url('../fonts/Mont-Regular.woff2') format('woff2'),
+        url('../fonts/Mont-Regular.woff') format('woff'),
+        url('../fonts/Mont-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'icon-font';
+    src: url('../fonts/icon-font.eot?vix5ex');
+    src: url('../fonts/icon-font.eot?vix5ex#iefix') format('embedded-opentype'),
+        url('../fonts/icon-font.ttf?vix5ex') format('truetype'),
+        url('../fonts/icon-font.woff?vix5ex') format('woff'),
+        url('../fonts/icon-font.svg?vix5ex#icon-font') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+.ic {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icon-font' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-uniE902:before {
+    content: "\e902";
+    color: #33393b;
+    line-height: 0.9;
+}
+
+.icon-dark-theme:before {
+    content: "\e900";
+    color: #fff;
+}
+
+.icon-light-theme:before {
+    content: "\e901";
+    color: #fff;
+}

@@ -1,0 +1,34 @@
+@import "_reset.scss";
+@import "_vars.scss";
+@import "_fonts.scss";
+@import "swiper.min.scss";
+@import "select2.scss";
+@import "jquery-ui.min.scss";
+@import "simplebar.scss";
+@import "aos.scss";
+@import "_burger.scss";
+@import "_header.scss";
+@import "_hero.scss";
+@import "_main-calc.scss";
+@import "_statistics.scss";
+@import "_personal-areas.scss";
+@import "_partners.scss";
+@import "_raiting.scss";
+@import "_offers.scss";
+@import "_application.scss";
+@import "_about-main.scss";
+@import "_quote-main.scss";
+@import "_reviews.scss";
+@import "_ready.scss";
+@import "_questions.scss";
+@import "_footer.scss";
+@import "_forms.scss";
+@import "_authorization.scss";
+@import "_registration.scss";
+
+
+body {
+    &.opened {
+        overflow-y: hidden;
+    }
+}

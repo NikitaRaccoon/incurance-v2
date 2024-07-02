@@ -1,0 +1,296 @@
+.main-calc {
+
+    padding: 90px 0px 80px 0px;
+
+    &__buttons-select {
+        display: none;
+    }
+
+    h2 {
+        margin-bottom: 40px;
+        color: #34393b;
+    }
+
+    &__buttons {
+
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        a {
+            display: inline-block;
+            flex: 1 1 auto;
+            padding: 15px 25px;
+            text-align: center;
+            color: $font2;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 110%;
+            border-radius: 10px;
+            background-color: $heroBackground;
+            transition: background-color .3s;
+
+            &::before {
+                display: block;
+                content: attr(title);
+                font-weight: bold;
+                height: 0;
+                overflow: hidden;
+                visibility: hidden;
+                transition: 0;
+            }
+
+            &.active,
+            &:hover {
+                background-color: $blue1;
+                color: transparent;
+
+                &::before {
+                    color: $white;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 110%;
+                    visibility: visible;
+                    overflow: visible;
+                }
+            }
+        }
+
+    }
+
+    &__buttons-row {
+        display: flex;
+        gap: 15px;
+    }
+
+    &__wrapper {}
+}
+
+@media (max-width: 1400px) {
+
+    .main-calc {
+
+        padding: 80px 0px 70px 0px;
+
+        h2 {
+            font-size: 40px;
+            margin-bottom: 55px;
+        }
+
+        &__buttons {
+
+            margin-bottom: 20px;
+            gap: 10px;
+
+            a {
+                font-size: 15px;
+
+                &.active,
+                &:hover {
+
+                    &::before {
+                        font-size: 15px;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+}
+
+@media (max-width: 991px) {
+
+    .main-calc {
+
+
+        padding: 50px 0;
+
+        h2 {
+            font-size: 25px;
+            margin-bottom: 30px;
+        }
+
+        &__buttons {
+
+            gap: 5px;
+
+            a {
+                font-size: 12px;
+                padding: 10px 5px;
+                border-radius: 6px;
+
+                &.active,
+                &:hover {
+
+                    &::before {
+                        font-size: 12px;
+                    }
+                }
+            }
+
+        }
+
+        &__buttons-row {
+
+            gap: 5px;
+
+        }
+
+    }
+
+}
+
+@media (max-width: 620px) {
+
+    .main-calc {
+
+
+        &__buttons-select {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+
+            .select2 {
+                max-width: 350px;
+                padding: 10px 30px 10px 20px;
+                background-color: $blue1;
+                border-radius: 8px;
+                height: 65px;
+                display: flex;
+                align-items: center;
+            }
+
+            .selection {
+                width: 100%;
+            }
+
+            .select2-selection {
+                border: none;
+                background-color: transparent;
+                height: auto;
+            }
+
+            .select2-container--default .select2-selection--single .select2-selection__rendered {
+                color: $white;
+                padding: 0;
+                font-size: 15px;
+                font-weight: 600;
+                line-height: 125%;
+
+            }
+
+            .select2-container--default .select2-selection--single .select2-selection__arrow {
+                height: 100%;
+                width: 40px;
+            }
+
+            .select2-container--default .select2-selection--single .select2-selection__arrow b {
+                border: none;
+                background: url(../images/icons/select-arrow-white.svg) center / cover no-repeat;
+                width: 10px;
+                height: 7px;
+                top: calc(50% - 3px);
+            }
+
+            .select2-container .select2-selection--single .select2-selection__rendered {
+                text-overflow: unset;
+                white-space: wrap;
+            }
+        }
+
+        padding: 35px 0;
+
+        h2 {
+            font-size: 25px;
+            margin-bottom: 30px;
+        }
+
+        &__buttons {
+
+            display: none;
+
+        }
+
+    }
+
+}
+
+body.dark-theme {
+    background-color: #292E2F;
+
+    .main-calc {
+
+        &__buttons a,
+        &__item {
+            background-color: #33393B;
+        }
+
+        &__buttons a {
+            &.active {
+                background-color: $blue1;
+            }
+        }
+
+        input {
+            background-color: #292E2F;
+        }
+
+        .form__item.segment .segments__wrapper {
+            background-color: #292E2F;
+        }
+
+        .form__item.segment label {
+            background-color: #292E2F;
+            color: #66747A !important;
+
+            &:nth-child(2) {
+                box-shadow: 10px 0 0 1px #292e2f, -1px 0 0 1px #292e2f;
+            }
+
+        }
+
+        .form__item.segment input[type=radio]:checked+label {
+            background-color: #fff;
+
+            &:nth-child(2) {
+                box-shadow: 10px 0 0 1px #fff, -1px 0 0 1px #fff;
+            }
+        }
+
+        .form__item.car-number .car-number__wrapper div,
+        .form__item.radio .form__item-wrapper label span,
+        .form__item.checkbox .form__item-wrapper label span,
+        .form__item.select .select2 {
+            background-color: #292E2F;
+        }
+
+        .form__item.date>div:before {
+            background: url(../images/icons/datepicker-grey.svg) 50%/cover no-repeat;
+        }
+
+        .form__item.select .select2-container--default .select2-selection--single .select2-selection__arrow b {
+            background: url(../images/icons/select-arrow-white.svg) 50%/cover no-repeat;
+        }
+
+        .form__item input[type=number]:not(:placeholder-shown),
+        .form__item input[type=text]:not(:placeholder-shown) {
+            border-color: rgba(255, 255, 255, 0.05);
+        }
+
+        input[type=range] {
+            background-color: rgba(255, 255, 255, 0.10);
+
+            &::-webkit-slider-thumb {
+                background: #FFF;
+            }
+
+            &::-moz-range-thumb {
+                background: #FFF;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,1238 @@
+.main-calc {
+
+    &__item {
+
+        padding: 60px 50px 60px 70px;
+        border-radius: 20px;
+        display: none;
+        background-color: #F9FAFB;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &.active {
+            display: block;
+        }
+
+        .form__item-container {
+            label {
+                left: 45px;
+                font-size: 15px;
+                text-align: left;
+            }
+        }
+
+        &.osago {
+
+            transition: .3s;
+
+            &.car {
+                background-image: url(../images/main-calc-1.png);
+            }
+
+            &.bike {
+                background-image: url(../images/main-calc-1-bike.png);
+            }
+
+            .form__item.segment {
+                margin-bottom: 30px;
+            }
+        }
+
+        &.carrier {
+            background-image: url(../images/main-calc-2.png);
+
+            .calc-title {
+                max-width: 625px;
+                margin-bottom: 50px;
+            }
+        }
+
+        &.dangerous-objects {
+            background-image: url(../images/main-calc-3.png);
+
+            .calc-title {
+                max-width: 645px;
+                margin-bottom: 60px;
+            }
+
+            .form__item.date {
+                margin-bottom: 20px;
+            }
+        }
+
+        &.dms {
+            background-image: url(../images/main-calc-4.jpg);
+
+            .calc-title {
+                max-width: 590px;
+                margin-bottom: 60px;
+            }
+        }
+
+        &.accident-insurance {
+            background-image: url(../images/main-calc-5.png);
+
+            .form__item.select.mobile {
+                display: none;
+            }
+
+            .calc-title {
+                margin-bottom: 40px;
+            }
+        }
+
+        &.cargo {
+            background-image: url(../images/main-calc-6.png);
+
+            .calc-title {
+                margin-bottom: 83px;
+            }
+        }
+
+        &.journey {
+
+            background-image: url(../images/main-calc-7.png);
+
+            .form__item-row {
+
+                &:first-child {
+
+                    .form__item {
+                        &:nth-child(2) {
+                            max-width: 168px;
+                        }
+
+                        &:nth-child(3) {
+                            max-width: 140px;
+                        }
+                    }
+
+                }
+            }
+
+            .calc-title {
+                margin-bottom: 40px;
+            }
+        }
+
+        &.real-estate {
+
+            transition: .3s;
+
+            &.flat {
+                background-image: url(../images/main-calc-8-flat.png);
+            }
+
+            &.house {
+                background-image: url(../images/main-calc-8-house.png);
+
+            }
+
+            .calc-title {
+                margin-bottom: 80px;
+            }
+
+            .form__item.segment {
+                margin-bottom: 30px;
+            }
+
+            .form__item-row {
+                &:nth-child(2) {
+                    .form__item {
+                        &:last-child {
+                            max-width: 145px;
+                        }
+                    }
+                }
+            }
+
+            .form__item.radio {
+                flex-direction: row;
+                max-width: 100%;
+                gap: 35px;
+            }
+
+        }
+
+        .calc-title {
+            color: $font1;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 110%;
+            margin-bottom: 20px;
+        }
+
+        .calc-subtitle {
+            color: $font2;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 145%;
+            max-width: 550px;
+            margin-bottom: 40px;
+
+            b {
+                color: $font1;
+            }
+        }
+
+    }
+
+}
+
+.form {
+
+    &__item {
+
+        width: 100%;
+        max-width: 330px;
+        margin-bottom: 15px;
+
+        &>p {
+            color: $font1;
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 145%;
+            margin-bottom: 10px;
+        }
+
+        .hint {
+            margin-top: 10px;
+            display: inline-block;
+            color: $font2;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 145%;
+
+            b {
+                color: $blue1;
+                border-bottom: 1px dotted;
+            }
+        }
+
+        &.segment {
+
+            input[type=radio]:checked+label {
+                background-color: $white;
+                color: $font1;
+                box-shadow: 0 0 0px 1px $white;
+                font-weight: 600;
+                z-index: 2;
+
+                &:nth-child(2) {
+                    box-shadow: 10px 0 0px 1px #fff, -1px 0px 0px 1px #fff;
+                }
+            }
+
+            .segments__wrapper {
+                display: flex;
+                border-radius: 100px;
+                background-color: #66747A;
+                color: $white;
+                max-width: max-content;
+            }
+
+            label {
+                position: relative;
+                transition: color .3s;
+                display: inline-block;
+                padding: 15px 40px;
+                font-size: 16px;
+                line-height: 145%;
+                font-weight: 600;
+                border-radius: 100px;
+                cursor: pointer;
+
+                &:nth-child(2) {
+                    padding-right: 25px;
+                }
+            }
+
+        }
+
+        &.car-number {
+
+            .car-number__wrapper {
+                display: flex;
+                gap: 1px;
+
+                input {
+                    border-radius: 7px 0px 0px 7px;
+                }
+
+                div:not(.form__item-container) {
+                    background-color: $white;
+                    padding: 25px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 0px 7px 7px 0px;
+                }
+            }
+        }
+
+        &.radio {
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .form__item-wrapper {
+
+                input[type=radio]:checked+label span {
+                    &::before {
+                        transform: scale(1);
+                    }
+                }
+
+                label {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    width: 100%;
+                    cursor: pointer;
+
+                    span {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex: 0 0 25px;
+                        height: 25px;
+                        background-color: $white;
+                        border-radius: 50%;
+
+                        &::before {
+                            content: "";
+                            display: inline-block;
+                            width: 9px;
+                            height: 7px;
+                            transition: .3s;
+                            background: url(../images/icons/hero-advantages-icon.svg) center / cover no-repeat;
+                            transform: scale(0);
+                        }
+
+                    }
+
+                    p {
+                        color: $font1;
+                        font-size: 15px;
+                        font-weight: 400;
+                        line-height: 145%;
+                    }
+
+                }
+
+            }
+
+        }
+
+        &.checkbox {
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 100%;
+
+            .form__item-wrapper {
+
+                input[type=checkbox]:checked+label span {
+                    &::before {
+                        transform: scale(1);
+                    }
+                }
+
+                label {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    width: 100%;
+                    cursor: pointer;
+
+                    span {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex: 0 0 25px;
+                        height: 25px;
+                        background-color: $white;
+                        border-radius: 50%;
+
+                        &::before {
+                            content: "";
+                            display: inline-block;
+                            width: 9px;
+                            height: 7px;
+                            transition: .3s;
+                            background: url(../images/icons/hero-advantages-icon.svg) center / cover no-repeat;
+                            transform: scale(0);
+                        }
+
+                    }
+
+                    p {
+                        color: $font1;
+                        font-size: 15px;
+                        font-weight: 400;
+                        line-height: 145%;
+                    }
+
+                }
+
+            }
+
+        }
+
+        .tooltip {
+
+            width: 20px;
+            flex: 0 0 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #82CCDB;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            &:hover {
+                &>.tooltip-text {
+                    display: block;
+                }
+            }
+
+
+            .tooltip-text {
+                display: none;
+                color: $font2;
+                font-size: 10px;
+                line-height: 125%;
+                font-weight: 600;
+                min-width: 240px;
+                padding: 5px 10px;
+                border-radius: 5px;
+                background-color: $white;
+                position: absolute;
+                top: -14px;
+                left: calc(100% + 2px);
+
+                &::before {
+                    content: "";
+                    display: inline-block;
+                    background-color: $white;
+                    width: 8px;
+                    height: 8px;
+                    transform: rotate(45deg);
+                    position: absolute;
+                    top: calc(50% - 4px);
+                    left: -4px;
+                }
+            }
+
+        }
+
+        &.date {
+
+
+            &>div {
+                position: relative;
+
+                &::before {
+                    content: "";
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    background: url(../images/icons/datepicker.svg) center / cover no-repeat;
+                    position: absolute;
+                    top: calc(50% - 10px);
+                    left: 35px;
+
+                }
+            }
+
+            input[type=text],
+            input[type=number] {
+                padding-left: 80px;
+            }
+
+        }
+
+        &.select {
+            .select2 {
+                max-width: 350px;
+                padding: 20px 35px;
+                background-color: $white;
+                border-radius: 7px;
+                height: 65px;
+                display: flex;
+                align-items: center;
+            }
+
+            .selection {
+                width: 100%;
+            }
+
+            .select2-selection {
+                border: none;
+                background-color: transparent;
+                height: auto;
+            }
+
+            .select2-container--default .select2-selection--single .select2-selection__rendered {
+                font-family: 'Mont';
+                color: $font2;
+                padding: 0;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 125%;
+            }
+
+            .select2-container--default .select2-selection--single .select2-selection__arrow {
+                height: 100%;
+                width: 1px;
+            }
+
+            .select2-container--default .select2-selection--single .select2-selection__arrow b {
+                border: none;
+                background: url(../images/icons/select-arrow-grey.svg) center / cover no-repeat;
+                width: 10px;
+                height: 7px;
+                top: calc(50% - 3px);
+            }
+
+            .select2-container--default .select2-selection--single .select2-selection__arrow {
+                right: 35px;
+            }
+
+            .select2-container .select2-selection--single .select2-selection__rendered {
+                text-overflow: unset;
+                white-space: wrap;
+            }
+        }
+
+        &.range {
+
+            .range-slider__turns {
+                margin-bottom: 30px;
+                display: flex;
+                justify-content: space-between;
+                padding: 0 5px;
+
+                span {
+                    color: $font2;
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: 145%;
+                }
+            }
+
+            input[type=range] {
+                height: 1px;
+                width: 100%;
+                -webkit-appearance: none;
+                background-color: rgba(0, 0, 0, 0.10);
+                margin-bottom: 15px;
+
+                &::-webkit-slider-thumb {
+                    cursor: pointer;
+                    background: #66747A;
+                    width: 15px;
+                    height: 15px;
+                    border: none;
+                    border-radius: 50%;
+                    -webkit-appearance: none;
+                    position: relative;
+                }
+
+                &::-moz-range-thumb {
+                    cursor: pointer;
+                    background: #66747A;
+                    width: 15px;
+                    height: 15px;
+                    border: none;
+                    border-radius: 50%;
+                    -moz-appearance: none;
+                    position: relative;
+                }
+            }
+        }
+
+        input[type=submit] {
+            display: inline-block;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        input[type=text],
+        input[type=number] {
+            width: 100%;
+            background-color: $white;
+            padding: 19px 25px;
+            color: $font1;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 145%;
+            border-radius: 7px;
+            transition: .3s;
+            border: 1px solid transparent;
+
+            &:hover,
+            &:focus,
+            &:focus-visible {
+                border: 1px solid #2DB4C9;
+            }
+
+            &:not(:placeholder-shown) {
+                border-color: #CEDAE1;
+            }
+        }
+
+    }
+
+    &__item-row {
+        align-items: flex-end;
+        display: flex;
+        gap: 30px;
+        margin-bottom: 15px;
+    }
+
+}
+
+
+// select 
+
+.select2-results {
+    z-index: 10;
+    overflow: hidden;
+}
+
+.select2-container--default .select2-results>.select2-results__options {
+    max-height: 180px;
+}
+
+.select2-results__option {
+    padding: 10px 35px;
+}
+
+.select2-dropdown--above {
+    top: -10px;
+}
+
+.select2-dropdown--below {
+    top: 10px;
+}
+
+.select2-container--default .select2-results>.select2-results__options {
+    padding-right: 35px;
+}
+
+.select2-container--open .select2-dropdown--above,
+.select2-container--open .select2-dropdown--below {
+    border: none;
+    border-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    overflow: hidden;
+    padding: 10px 0px;
+}
+
+.simplebar-track.simplebar-vertical {
+    width: 10px;
+    margin: 0 13px;
+    background-color: #FAFBFD;
+    border-radius: 100px;
+    height: 174px;
+    top: 3px;
+    box-shadow: 0px -3px 0px 0px #FAFBFD, 0px 3px 0px 0px #FAFBFD;
+}
+
+.simplebar-scrollbar {
+    width: 4px;
+    right: auto;
+    left: calc(50% - 2px);
+    background: $blue1;
+    border-radius: 100px;
+    height: 35px;
+}
+
+.select2-results__option {
+    font-size: 15px;
+    line-height: 145%;
+    border-radius: 0px 5px 5px 0px;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+
+    color: #33393B;
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable,
+.select2-container--default .select2-results__option--selected {
+    background-color: #FAFBFD;
+    border-color: #F2F5F8;
+    color: #33393B;
+}
+
+body.dark-theme {
+
+    .select2-dropdown {
+        background-color: #292E2F;
+
+
+        .select2-results__option {
+            color: #fff;
+        }
+
+    }
+
+    .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable,
+    .select2-container--default .select2-results__option--selected {
+        background-color: #33393b;
+        border-color: #292E2F;
+        color: #fff;
+    }
+
+    .simplebar-track.simplebar-vertical {
+        background-color: #33393b;
+        box-shadow: 0 -3px 0 0 #33393b, 0 3px 0 0 #33393b;
+    }
+
+    .ui-widget-content {
+        background-color: #33393b;
+        border-color: #292E2F;
+    }
+
+    .ui-widget-header {
+        background-color: #292E2F;
+        border-color: transparent;
+    }
+
+    .ui-datepicker-month,
+    .ui-datepicker-year {
+        color: #fff;
+    }
+
+    .ui-state-default {
+        background-color: #292E2F;
+        color: #fff;
+        border-color: transparent;
+    }
+
+    .ui-datepicker-calendar {
+        color: #fff;
+    }
+
+    .ui-state-default.ui-state-active {
+        background-color: #2DB4C9;
+    }
+
+}
+
+
+@media (max-width:1400px) {
+    .main-calc {
+
+        &__item {
+
+            padding: 50px 60px 55px 60px;
+
+            &.osago {
+                &.car {}
+            }
+
+            &.carrier {
+                .calc-title {
+                    max-width: 270px;
+                    margin-bottom: 60px;
+                }
+            }
+
+            &.dangerous-objects {
+
+                .calc-title {
+                    max-width: 440px;
+                }
+
+            }
+
+            &.accident-insurance {
+
+                .calc-title {
+                    margin-bottom: 50px;
+                }
+
+            }
+
+            &.cargo {
+                .calc-title {
+                    margin-bottom: 74px;
+                }
+            }
+
+            &.journey {
+
+                .calc-title {
+                    margin-bottom: 55px;
+                }
+
+            }
+
+            .calc-title {
+                font-size: 30px;
+            }
+
+            .calc-subtitle {
+                color: $font2;
+                font-size: 15px;
+                margin-bottom: 35px;
+            }
+
+        }
+
+    }
+}
+
+@media (max-width: 991px) {
+    .main-calc {
+
+        &__item {
+
+            padding: 40px;
+            border-radius: 20px;
+
+            &.osago {
+
+                .form__item.segment {
+                    margin-bottom: 15px;
+                }
+            }
+
+            &.carrier {
+                .form__item.radio {
+                    padding-top: 5px;
+                    margin-bottom: 15px;
+                }
+
+                .calc-title {
+                    margin-bottom: 30px;
+                }
+            }
+
+            &.dangerous-objects {
+
+                .form__item.date {
+                    margin-bottom: 10px;
+                }
+
+            }
+
+            &.dms {
+
+                .calc-title {
+                    margin-bottom: 30px;
+                }
+
+            }
+
+            &.accident-insurance {
+                background-image: url(../images/main-calc-5.png);
+
+                .form__item.select.mobile {
+                    display: block;
+                }
+
+                .form__item.range {
+                    display: none;
+                }
+
+                .calc-title {
+                    margin-bottom: 30px;
+                }
+            }
+
+            &.cargo {
+                background-image: none;
+
+                .calc-title {
+                    margin-bottom: 30px;
+                }
+            }
+
+            &.journey {
+                background-image: none;
+
+                .calc-title {
+                    margin-bottom: 30px;
+                }
+            }
+
+            &.real-estate {
+
+                &.flat {
+                    background-image: none;
+                }
+
+                &.house {
+                    background-image: none;
+
+                }
+
+                .calc-title {
+                    margin-bottom: 30px;
+                }
+
+                .form__item.segment {
+                    margin-bottom: 20px;
+                }
+
+                .form__item-row {
+                    &:nth-child(2) {
+
+                        .form__item {
+
+                            &:last-child {
+
+                                max-width: 330px;
+                            }
+                        }
+                    }
+                }
+
+                .form__item.radio {
+                    flex-direction: column;
+                    max-width: 100%;
+                    gap: 10px;
+
+                    .form__item-wrapper {
+                        // margin-right: 20px;
+                    }
+                }
+
+            }
+
+            .calc-title {
+                color: $font1;
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+
+            .calc-subtitle {
+                color: $font2;
+                font-size: 12px;
+                max-width: 420px;
+                margin-bottom: 30px;
+            }
+
+        }
+
+    }
+
+    .form {
+
+        &__item {
+
+            // max-width: 280px;
+            margin-bottom: 10px;
+
+            &>p {
+                font-size: 12px;
+            }
+
+            .hint {
+                font-size: 13px;
+            }
+
+            &.segment {
+
+                label {
+                    padding: 10px 35px;
+                    font-size: 12px;
+                }
+
+            }
+
+            &.car-number {
+
+                .car-number__wrapper {
+
+                    div:not(.form__item-container) {
+                        padding: 23px;
+                    }
+                }
+            }
+
+            &.radio {
+                max-width: 100%;
+
+                .form__item-wrapper {
+
+                    display: flex;
+
+                    label {
+
+                        gap: 10px;
+
+                        p {
+                            font-size: 13px;
+                        }
+
+                        span {
+
+                            flex: 0 0 20px;
+                            height: 20px;
+
+                        }
+                    }
+                }
+
+
+            }
+
+            &.checkbox {
+                max-width: 100%;
+
+                .form__item-wrapper {
+
+                    display: flex;
+
+                    label {
+
+                        gap: 10px;
+
+                        p {
+                            font-size: 13px;
+                        }
+
+                        span {
+
+                            flex: 0 0 20px;
+                            height: 20px;
+
+                        }
+                    }
+                }
+
+
+            }
+
+            &.select {
+
+                .select2 {
+                    padding: 20px 25px;
+                    border-radius: 7px;
+                    height: 57px;
+                }
+
+                .select2-container--default .select2-selection--single .select2-selection__rendered {
+                    font-size: 12px;
+                }
+            }
+
+            input[type=text],
+            input[type=number] {
+                padding: 20px 35px;
+                font-size: 12px;
+            }
+
+            input[type=submit] {
+                font-size: 13px;
+            }
+
+        }
+
+    }
+}
+
+@media (max-width: 620px) {
+
+    .main-calc {
+
+        &__item {
+
+            padding: 30px;
+            border-radius: 10px;
+            min-height: 700px;
+
+            &.osago {
+
+                &.car {
+                    background-image: url(../images/main-calc-1-mobile.png);
+                }
+
+                &.bike {
+                    background-image: url(../images/main-calc-1-bike-mobile.png);
+                }
+
+                .form__item.segment {
+                    margin-bottom: 20px;
+                }
+            }
+
+            &.carrier {
+                background-image: url(../images/main-calc-2-mobile.png);
+
+                .calc-title {
+                    margin-bottom: 25px;
+                }
+            }
+
+            &.dangerous-objects {
+                background-image: url(../images/main-calc-3-mobile.png);
+
+                .calc-title {
+                    margin-bottom: 20px;
+                }
+            }
+
+            &.dms {
+                background-image: url(../images/main-calc-4-mobile.png);
+
+                .calc-title {
+                    margin-bottom: 20px;
+                }
+            }
+
+            &.accident-insurance {
+                background-image: url(../images/main-calc-5-mobile.png);
+
+                .calc-title {
+                    margin-bottom: 20px;
+                }
+            }
+
+            &.cargo {
+                min-height: 780px;
+                background-image: url(../images/main-calc-6-mobile.png);
+
+                .calc-title {
+                    margin-bottom: 20px;
+                }
+            }
+
+            &.journey {
+                min-height: 1100px;
+                background-image: url(../images/main-calc-7-mobile.png);
+
+                .form__item-row {
+
+                    flex-direction: row;
+                    flex-wrap: wrap;
+
+                    &:first-child {
+
+                        .form__item {
+                            &:nth-child(2) {
+                                max-width: calc(50% - 10px);
+                                margin-right: 19px;
+                            }
+
+                            &:nth-child(3) {
+                                max-width: calc(50% - 10px);
+                            }
+                        }
+
+                    }
+                }
+
+                .calc-title {
+                    margin-bottom: 20px;
+                }
+            }
+
+            &.real-estate {
+
+                min-height: 800px;
+
+                &.flat {
+                    background-image: url(../images/main-calc-8-flat-mobile.png);
+                }
+
+                &.house {
+                    background-image: url(../images/main-calc-8-house-mobile.png);
+                }
+
+                .calc-title {
+                    margin-bottom: 20px;
+                }
+            }
+
+            .calc-title {
+                margin-bottom: 15px;
+            }
+
+            .calc-subtitle {
+                font-size: 14px;
+                margin-bottom: 25px;
+            }
+
+        }
+
+    }
+
+    .form {
+
+        &__item {
+
+            max-width: 100%;
+            margin-bottom: 15px;
+
+            .hint {
+                font-size: 15px;
+                margin-top: 15px;
+            }
+
+            &.segment {
+
+                .segments__wrapper {
+                    max-width: 100%;
+                }
+
+                label {
+                    padding: 10px 35px;
+                    font-size: 14px;
+                    width: 100%;
+                    text-align: center;
+                }
+
+            }
+
+            &.select {
+                .select2 {
+                    padding: 20px 25px;
+                    max-width: 100%;
+                }
+
+                .select2-container--default .select2-selection--single .select2-selection__rendered {
+                    font-size: 12px;
+                }
+            }
+
+            &.car-number {
+
+                .car-number__wrapper {
+
+                    div:not(.form__item-container) {
+                        padding: 23px;
+                    }
+                }
+            }
+
+            input[type=text],
+            input[type=number] {
+                font-size: 13px;
+            }
+
+            input[type=submit] {
+                font-size: 15px;
+            }
+
+        }
+
+
+        &__item-row {
+            flex-direction: column;
+            margin-bottom: 0;
+            gap: 0px;
+        }
+
+    }
+}

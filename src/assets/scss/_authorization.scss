@@ -1,0 +1,165 @@
+.authorization {
+    height: 100vh;
+    padding: 140px 175px;
+    background: url(../images/authorization.jpg) center / cover no-repeat;
+    display: flex;
+
+    &__img {
+        display: none;
+    }
+
+    &__logo.dark {
+        display: none;
+    }
+
+    &__logo {
+        display: none;
+    }
+
+    &__col {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__title {
+        font-size: 55px;
+        line-height: 110%;
+        font-weight: 700;
+        color: #fff;
+        max-width: 725px;
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__btn {
+        color: $blue1;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px;
+        background-color: #fff;
+        padding: 25px 72px;
+        border-radius: 10px;
+        transition: .3s;
+        max-width: 345px;
+        text-align: center;
+
+        &.sm {
+            max-width: max-content;
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .authorization {
+        background: url(../images/authorization.jpg) center / contain no-repeat, #2DB4C9;
+        padding: 140px 100px;
+
+        &__title {
+            font-size: 55px;
+            line-height: 110%;
+            font-weight: 700;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .authorization {
+
+        background: #2DB4C9;
+        padding: 40px 0px;
+
+        &__col {
+            align-items: center;
+            width: 100%;
+            justify-content: center;
+        }
+
+        &__img {
+            display: block;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        &__logo {
+            display: block;
+            width: 135px;
+            margin: 0 auto 75px auto;
+
+            &.dark {
+                display: none;
+            }
+        }
+
+        &__title {
+            margin-bottom: 0;
+            font-size: 30px;
+            text-align: center;
+            margin: 0 45px;
+        }
+
+        &__buttons {
+            padding: 0 45px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__btn {
+            padding: 20px 40px;
+            gap: 10px;
+            font-size: 15px;
+            line-height: 24px;
+            width: 100%;
+            text-align: center;
+            max-width: 300px;
+
+            &.sm {
+                max-width: 300px;
+            }
+        }
+    }
+}
+
+body.dark-theme {
+
+    .authorization {
+
+        background: url(../images/authorization-dark.jpg) center / cover no-repeat;
+
+
+        &__btn {
+
+            color: #292E2F;
+
+        }
+
+    }
+
+    @media (max-width: 1300px) {
+        .authorization {
+            background: url(../images/authorization.jpg) center / contain no-repeat, #2DB4C9;
+            background: url(../images/authorization-dark.jpg) center / contain no-repeat, #292E2F;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .authorization {
+            background: #292E2F;
+
+            &__logo {
+                display: none;
+
+                &.dark {
+                    display: block;
+                }
+            }
+        }
+    }
+}
